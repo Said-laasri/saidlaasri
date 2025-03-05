@@ -1,0 +1,125 @@
+//
+// Blog //
+//
+.blog-post-box {
+	.blog-post-img {
+		position: relative;
+		overflow: hidden;
+		border-radius: 1em;
+		.blog-post-img-link {
+			display: block;
+			&:before {
+				content: '';
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				background-color: #ff82f3;
+				background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+				width: 100%;
+				height: 100%;
+				@include transition(linear 0.1s);
+			}
+		}
+		img {
+			@include transform(scale(1));
+			width: 100%;
+			@include transition(transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
+		}
+		.blog-post-category {
+			z-index: 2;
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			display: inline-block;
+			background: $color-black-02;
+			backdrop-filter: blur(5px);
+			padding: 10px 20px;
+			border-radius: 2em;
+			color: white;
+			font-family: $font-family-secondary;
+			font-size: 0.9em;
+			font-weight: $font-weight-medium;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			span {
+				display: block;
+				position: relative;
+				color: transparent;
+				&:before, &:after {
+					content: attr(data-text);
+					position: absolute;
+					left: 0;
+					color: white;
+					@include transition(ease-out 0.14s);
+				}
+				&:before {
+					top: 0;
+				}
+				&:after {
+					visibility: hidden;
+					opacity: 0;
+					top: 100%;
+				}
+			}
+			&:hover {
+				span {
+					&:before {
+						visibility: hidden;
+						opacity: 0;
+						top: -100%;
+					}
+					&:after {
+						visibility: visible;
+						opacity: 1;
+						top: 0;
+					}
+				}
+			}
+		}
+		&:hover {
+			.blog-post-img-link {
+				&:before {
+					opacity: 0.1;
+				}
+			}
+			img {
+				@include transform(scale(1.04));
+			}
+		}
+	}
+	.blog-caption {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		@include transition(ease-out 0.2s);
+		i {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include transform(translateY(-50%));
+			visibility: hidden;
+			opacity: 0;
+			@include transition(linear 0.1s);
+		}
+	}
+	&:hover {
+		.blog-caption {
+			padding-left: 44px;
+			i {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.blog-slider {
+	&.swiper, &.swiper-container {
+		overflow: visible;
+	}
+}
+.swiper-blog-prev {
+	margin-right: 6px;
+}

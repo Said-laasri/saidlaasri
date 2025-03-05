@@ -1,0 +1,127 @@
+//
+// Background Colors //
+//
+.bg-black { background: $color-black; }
+.bg-dark { background: $color-dark; }
+.bg-white { background: $color-white; }
+.bg-green { background: $color-green; }
+.bg-red { background: $color-red; }
+.bg-yellow { background: $color-yellow; }
+
+.bg-light-content {
+	color: $color-primary;
+	h1,h2,h3,h4,h5,h6 { color: $color-dark; }
+	a {
+		&:not([class*='button']) {
+			color: black;
+			&:hover, &:focus { color: $color-dark; }
+		}
+	}
+}
+.bg-dark-content {
+	color: $color-white-07;
+	h1,h2,h3,h4,h5,h6 {
+		color: $color-white;
+		a {
+			color: white;
+			&:hover, &:focus { color: $color-white; }
+		}
+	}
+	a {
+		&:not([class*='button']) {
+			color: white;
+			&:hover, &:focus { color: $color-white; }
+		}
+	}
+}
+.bg-white { @extend .bg-light-content; }
+.bg-dark, *[class*='bg-black'] {
+	@extend .bg-dark-content;
+	.bg-white {
+		@extend .bg-light-content;
+	}
+}
+
+//
+// Box Border Radius //
+//
+.border-radius {
+	border-radius: 0.5em;
+}
+.border-radius-1 {
+	border-radius: 1em;
+}
+
+
+//
+// Font Families //
+//
+.font-family-primary { font-family: $font-family-primary }
+.font-family-secondary { font-family: $font-family-secondary }
+
+
+//
+// Font Weights //
+//
+.fw-medium { font-weight: $font-weight-medium; }
+.fw-semi-bold { font-weight: $font-weight-semi-bold; }
+
+
+//
+// Letter Spacing //
+//
+.letter-spacing-1 { letter-spacing: 1px; }
+.letter-spacing-2 { letter-spacing: 2px; }
+.letter-spacing-3 { letter-spacing: 3px; }
+.letter-spacing-4 { letter-spacing: 4px; }
+
+
+//
+// Line Heights //
+//
+.line-height-100 { line-height: 1; }
+.line-height-110 { line-height: 1.1; }
+.line-height-120 { line-height: 1.2; }
+.line-height-130 { line-height: 1.3; }
+.line-height-140 { line-height: 1.4; }
+
+
+//
+// Text Colors //
+//
+*.text-white-09 { color: $color-white-09; }
+*.text-white-08 { color: $color-white-08; }
+*.text-white-07 { color: $color-white-07; }
+*.text-white-06 { color: $color-white-06; }
+*.text-white-05 { color: $color-white-05; }
+*.text-white-04 { color: $color-white-04; }
+*.text-white-03 { color: $color-white-03; }
+*.text-white-02 { color: $color-white-02; }
+*.text-white-01 { color: $color-white-01; }
+*.text-black { color: $color-black; }
+*.text-dark { color: $color-dark; }
+*.text-green { color: $color-green; }
+*.text-red { color: $color-red; }
+*.text-yellow { color: $color-yellow; }
+
+//
+// Stroke Text //
+//
+.stroke-text {
+	color: white;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1.4px;
+	-webkit-text-stroke-color: white;
+	@include breakpoint-less(lg) {
+		-webkit-text-stroke-width: 1.2px;
+	}
+}
+
+//
+// Gradient Text //
+//
+.text-gradient {
+	background: -webkit-linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

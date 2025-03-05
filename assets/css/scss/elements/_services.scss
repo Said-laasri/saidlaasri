@@ -1,0 +1,94 @@
+//
+// Service box //
+//
+.service-box {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	background: $color-dark;
+	padding: 30px;
+	border-radius: 0.5em;
+	&:before {
+		z-index: -1;
+		content: '';
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #ff82f3;
+		background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+		width: 100%;
+		height: 100%;
+		@include transition(linear 0.1s);
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: #ff82f3;
+		background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+		width: 100%;
+		height: 2px;
+		@include transition(linear 0.1s);
+	}
+	.service-order {
+		* {
+			margin: 0;
+		}
+	}
+	.service-title {
+		* {
+			display: inline-flex;
+			margin-bottom: 0;
+		}
+		i {
+			font-size: 2em;
+			padding-right: 16px;
+			color: white;
+		}
+	}
+	&:hover {
+		&:before {
+			visibility: visible;
+			opacity: 0.1;
+		}
+	}
+}
+@include breakpoint-less(md) {
+	.service-box {
+		padding: 20px;
+		.service-order {
+			margin-bottom: 12px;
+		}
+		.service-title {
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 12px;
+			i {
+				padding-right: 12px;
+			}
+		}
+	}
+}
+@include breakpoint-above(lg) {
+	.service-box {
+		@include display-flex;
+		align-items: center;
+		.service-order {
+			display: inline-flex;
+			width: 15%;
+		}
+		.service-title {
+			display: inline-flex;
+			width: 40%;
+			align-items: center;
+			padding-right: 24px;
+		}
+		.service-text {
+			display: inline-flex;
+			width: 45%;
+		}
+	}
+}

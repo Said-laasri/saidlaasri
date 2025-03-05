@@ -1,0 +1,132 @@
+//
+// Header Menu //
+//
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 991;
+	padding: 20px 0;
+	text-align: center;
+	.container-fluid {
+		padding: 0 10px;
+	}
+	.header-wrapper {
+		@include display-flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10px;
+		.header-logo {
+			display: inline-flex;
+			* {
+				margin-bottom: 0;
+			}
+			img {
+				max-height: 42px;
+			}
+		}
+		.header-nav {
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			.nav-box {
+				z-index: 991;
+				visibility: hidden;
+				opacity: 0;
+				position: absolute;
+				@include transform(translateY(5px));
+				top: 60px;
+				right: 0;
+				background: $color-white-01;
+				backdrop-filter: blur(5px);
+				border-radius: 0.5em;
+				@include box-shadow(0 8px 24px 0 rgba(22,24,26,0.07));
+				padding: 26px 30px;
+				text-align: left;
+				@include transition(linear 0.1s);
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: #ff82f3;
+					background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+					width: 100%;
+					height: 100%;
+					border-radius: 0.5em;
+					opacity: 0.3;
+				}
+				&.show {
+					@include transform(translateY(0));
+					visibility: visible;
+					opacity: 1;
+				}
+				.nav {
+					.nav-item {
+						display: block;
+						width: 100%;
+						margin-bottom: 10px;
+						font-family: $font-family-secondary;
+						font-size: 1.25rem;
+						&:last-child {
+							margin-bottom: 0;
+						}
+						.nav-link {
+							position: relative;
+							padding: 0;
+							color: white;
+							@include transition(ease-out 0.2s);
+							i {
+								position: absolute;
+								top: 50%;
+								left: 0;
+								@include transform(translateY(-50%));
+								visibility: hidden;
+								opacity: 0;
+								@include transition(linear 0.1s);
+							}
+							&:hover, &.active {
+								padding-left: 26px;
+								i {
+									visibility: visible;
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+			@include breakpoint-less(lg) {
+				.nav-box {
+					top: 56px;
+				}
+			}
+		}
+	}
+	@include breakpoint-above(lg) {
+		.header-wrapper {
+			padding: 0 20px;
+		}
+	}
+	@include breakpoint-above(xl) {
+		.header-wrapper {
+			padding: 0 30px;
+		}
+	}
+	@include breakpoint-above(2xl) {
+		.header-wrapper {
+			padding: 0 40px;
+		}
+	}
+	@include breakpoint-above(3xl) {
+		.header-wrapper {
+			padding: 0 50px;
+		}
+	}
+}
+@include breakpoint-less(lg) {
+	.header {
+		padding: 16px 0;
+	}
+}

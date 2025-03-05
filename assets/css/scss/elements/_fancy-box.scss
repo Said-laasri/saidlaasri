@@ -1,0 +1,52 @@
+//
+// Fancy box //
+//
+.fancy-box {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	background: $color-dark;
+	padding: 30px;
+	border-radius: 0.5em;
+	&:before {
+		z-index: -1;
+		content: '';
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #ff82f3;
+		background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+		width: 100%;
+		height: 100%;
+		@include transition(linear 0.1s);
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: #ff82f3;
+		background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+		width: 100%;
+		height: 2px;
+		@include transition(linear 0.1s);
+	}
+	&:hover {
+		&:before {
+			visibility: visible;
+			opacity: 0.1;
+		}
+	}
+}
+@include breakpoint-less(lg) {
+	.fancy-box {
+		padding: 24px;
+	}
+}
+@include breakpoint-less(md) {
+	.fancy-box {
+		padding: 20px;
+	}
+}
