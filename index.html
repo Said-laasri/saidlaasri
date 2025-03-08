@@ -8,12 +8,14 @@
 	<meta name="keywords" content="">
 	<title>Said Laasri</title>
 	<!-- Favicon -->
-	<link href="assets/images/favicon.png" rel="shortcut icon">
+	<link href="assets/images/image.png" rel="shortcut icon">
 	<!-- CSS -->
 	<link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
 	<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
 	<link href="assets/css/theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
 	<!-- Fonts/Icons -->
 	<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 	<link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
@@ -56,9 +58,6 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#awards"><i class="bi bi-arrow-right"></i>Awards</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#testimonial"><i class="bi bi-arrow-right"></i>Testimonial</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#blog"><i class="bi bi-arrow-right"></i>Blog</a>
@@ -118,40 +117,50 @@
 							<h6 class="sm-heading">Connect</h6>
 							<ul class="list-inline">
 								<li>
-									<a class="button-circle button-circle-sm"  target="_blank" href="https://www.linkedin.com/in/said-laasri/">
+									<a class="button-circle button-circle-sm" target="_blank"
+										href="https://www.linkedin.com/in/said-laasri/">
 										<i class="bi bi-linkedin"></i>
 										<i class="bi bi-linkedin"></i>
 									</a>
 								</li>
 								<li>
-									<a class="button-circle button-circle-sm"  target="_blank" href="https://x.com/saidlaasr">
-										<i class="bi bi-twitter"></i>
-										<i class="bi bi-twitter"></i>
+									<a class="button-circle button-circle-sm" target="_blank"
+										href="https://x.com/saidlaasr">
+										<i class="bi bi-twitter-x"></i>
+										<i class="bi bi-twitter-x"></i>
 									</a>
 								</li>
 								<li>
-									<a class="button-circle button-circle-sm"   target="_blank" href="https://github.com/Said-laasri">
+									<a class="button-circle button-circle-sm" target="_blank"
+										href="https://github.com/Said-laasri">
 										<i class="bi bi-github"></i>
 										<i class="bi bi-github"></i>
 									</a>
 								</li>
 							</ul>
 						</div>
+						<button class="button-resume"  href="https://docs.google.com/document/d/13Fy4JK4C9YRSUz9TvDD4bdla7alf-en0/export?format=pdf" download>
+							<a  href="https://docs.google.com/document/d/13Fy4JK4C9YRSUz9TvDD4bdla7alf-en0/export?format=pdf" download>
+								<span data-text="Resume ⤓">Resume ⤓</span>
+							
+							</a>
+							
+						</button>			
 					</div><!-- end row(inner) -->
 				</div>
 				<div class="col-12 col-md-12 col-lg-4 order-lg-3 text-lg-end">
 					<div class="row g-4 g-lg-5">
 						<div class="col-4 col-lg-12">
 							<h6 class="sm-heading">Projects Done</h6>
-							<h1 class="fw-light display-4 mb-0 line-height-110">62</h1>
+							<h1 class="fw-light display-4 mb-0 line-height-110">4+</h1>
 						</div>
 						<div class="col-4 col-lg-12">
 							<h6 class="sm-heading">Years of Experience</h6>
 							<h1 class="fw-light display-4 mb-0 line-height-110">3+</h1>
 						</div>
 						<div class="col-4 col-lg-12">
-							<h6 class="sm-heading">Worldwide Clients</h6>
-							<h1 class="fw-light display-4 mb-0 line-height-110">10</h1>
+							<h6 class="sm-heading">Worldwide Companies</h6>
+							<h1 class="fw-light display-4 mb-0 line-height-110">3</h1>
 						</div>
 					</div><!-- end row(inner) -->
 				</div>
@@ -180,8 +189,8 @@
 										<h3>Design</h3>
 									</div>
 									<div class="service-text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut</p>
+										<p>Designing efficient backend architectures with the focus on scalability and
+											security.</p>
 									</div>
 								</div>
 							</div>
@@ -196,8 +205,7 @@
 										<h3>Development</h3>
 									</div>
 									<div class="service-text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et</p>
+										<p>Building user-friendly applications with a focus on performance and security.</p>
 									</div>
 								</div>
 							</div>
@@ -212,8 +220,8 @@
 										<h3>Shipping</h3>
 									</div>
 									<div class="service-text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore</p>
+										<p>Deploying applications seamlessly and efficiently.
+											</p>
 									</div>
 								</div>
 							</div>
@@ -224,66 +232,6 @@
 			</div><!-- end container -->
 		</div>
 		<!-- end Services section -->
-
-		<!-- Clients section -->
-		<div class="section pt-0">
-			<div class="container">
-				<div class="swiper clients-slider">
-					<div class="swiper-wrapper">
-						<!-- Slider Item 1 -->
-						<div class="swiper-slide">
-							<div class="client-box">
-								<a href="#">
-									<img src="assets/images/client-logo.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<!-- Slider Item 2 -->
-						<div class="swiper-slide">
-							<div class="client-box">
-								<a href="#">
-									<img src="assets/images/client-logo.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<!-- Slider Item 3 -->
-						<div class="swiper-slide">
-							<div class="client-box">
-								<a href="#">
-									<img src="assets/images/client-logo.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<!-- Slider Item 4 -->
-						<div class="swiper-slide">
-							<div class="client-box">
-								<a href="#">
-									<img src="assets/images/client-logo.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<!-- Slider Item 5 -->
-						<div class="swiper-slide">
-							<div class="client-box">
-								<a href="#">
-									<img src="assets/images/client-logo.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<!-- Slider Item 6 -->
-						<div class="swiper-slide">
-							<div class="client-box">
-								<a href="#">
-									<img src="assets/images/client-logo.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<!-- end Slider Item 6 -->
-					</div><!-- end swiper-wrapper -->
-				</div><!-- end clients-slider -->
-			</div><!-- end container -->
-		</div>
-		<!-- end Clients section -->
 
 		<!-- Portfolio section -->
 		<div id="portfolio" class="section-box">
@@ -435,124 +383,31 @@
 		<!-- end Portfolio section -->
 
 		<!-- Awards section -->
-		<div id="awards" class="section pb-0">
+		<div id="awards" class="section pb-6">
 			<div class="container">
 				<div class="row g-4 g-xl-5">
 					<div class="col-12 col-xl-4">
 						<span class="title-heading text-white-04">Achievements</span>
-						<h1 class="display-3 fw-medium mb-0">Awa<span class="text-gradient">rds</span></h1>
+						<h1 class="display-3 fw-medium mb-0 selectable" onclick="displayCards('awards', this)">
+							Awa<span class="text-gradient">rds</span>
+						</h1>
+						<h1 class="display-3 fw-medium mb-0 selectable" onclick="displayCards('experience', this)">
+							Expe<span class="text-gradient">rience</span>
+						</h1>
+						<h1 class="display-3 fw-medium mb-0 selectable" onclick="displayCards('education', this)">
+							Educa<span class="text-gradient">tion</span>
+						</h1>
 					</div>
 					<div class="col-12 col-xl-8">
-						<div class="row g-4">
+						<div class="row g-4" id="cards-container">
 							<!-- Award box 1 -->
-							<div class="col-12 col-md-6">
-								<div class="fancy-box">
-									<h4>Award Title</h4>
-									<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore</p>
-								</div>
-							</div>
-							<!-- Award box 2 -->
-							<div class="col-12 col-md-6">
-								<div class="fancy-box">
-									<h4>Award Title</h4>
-									<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et</p>
-								</div>
-							</div>
-							<!-- Award box 3 -->
-							<div class="col-12 col-md-6">
-								<div class="fancy-box">
-									<h4>Award Title</h4>
-									<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore</p>
-								</div>
-							</div>
-							<!-- Award box 4 -->
-							<div class="col-12 col-md-6">
-								<div class="fancy-box">
-									<h4>Award Title</h4>
-									<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore</p>
-								</div>
-							</div>
-							<!-- end Award box 4 -->
+							 <!-- data dynamicaly generated -->
 						</div><!-- end row(inner) -->
 					</div>
 				</div><!-- end row -->
 			</div><!-- end container -->
 		</div>
 		<!-- end Awards section -->
-
-		<!-- Testimonial section -->
-		<div id="testimonial" class="section">
-			<div class="container">
-				<div class="swiper testimonial-slider">
-					<div class="swiper-wrapper">
-						<!-- Slider item 1 -->
-						<div class="swiper-slide">
-							<div class="testimonial-box">
-								<div class="testimonial-avatar">
-									<img src="assets/images/testimonial-avatar.jpg" alt="">
-								</div>
-								<div class="testimonial-content">
-									<div class="mb-3">
-										<h3>Alexander Warren</h3>
-										<span class="sm-heading text-white">CTO - Company</span>
-									</div>
-									<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet,
-										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore</p>
-								</div>
-							</div>
-						</div>
-						<!-- Slider item 2 -->
-						<div class="swiper-slide">
-							<div class="testimonial-box">
-								<div class="testimonial-avatar">
-									<img src="assets/images/testimonial-avatar.jpg" alt="">
-								</div>
-								<div class="testimonial-content">
-									<div class="mb-3">
-										<h3>Alexander Warren</h3>
-										<span class="sm-heading text-white">CTO - Company</span>
-									</div>
-									<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet,
-										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore</p>
-								</div>
-							</div>
-						</div>
-						<!-- Slider item 3 -->
-						<div class="swiper-slide">
-							<div class="testimonial-box">
-								<div class="testimonial-avatar">
-									<img src="assets/images/testimonial-avatar.jpg" alt="">
-								</div>
-								<div class="testimonial-content">
-									<div class="mb-3">
-										<h3>Alexander Warren</h3>
-										<span class="sm-heading text-white">CTO - Company</span>
-									</div>
-									<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet,
-										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Slider Pagination Progress -->
-					<div class="swiper-testimonial-pagination"></div>
-					<!-- end Slider Pagination Progress -->
-				</div>
-			</div><!-- end container -->
-		</div>
-		<!-- end Testimonial section -->
-
 		<!-- Blog section -->
 		<div id="blog" class="section-box">
 			<div class="section-sm bg-dark border-radius-1">
@@ -591,7 +446,7 @@
 										<!-- Category -->
 										<div class="blog-post-category">
 											<a href="#">
-												<span data-text="Category">Category</span>
+												<span data-text="Security">Security</span>
 											</a>
 										</div>
 									</div>
@@ -599,19 +454,20 @@
 										<ul class="list-inline-dot sm-heading text-white mb-2">
 											<li>
 												<a class="link-hover" href="#">
-													<span data-text="by Admin">by Admin</span>
+													<span data-text="by Said-laasri">by Said-laasri</span>
 												</a>
 											</li>
 											<li>
 												<a class="link-hover" href="#">
-													<span data-text="Oct 8">Oct 8</span>
+													<span data-text="
+													Mar 26">Mar 26</span>
 												</a>
 											</li>
 										</ul>
 										<h2 class="mb-0">
 											<a class="blog-caption" href="#">
 												<i class="bi bi-arrow-right"></i>
-												Blog Post Title
+												The OWASP Top 10
 											</a>
 										</h2>
 									</div>
@@ -628,7 +484,7 @@
 										<!-- Category -->
 										<div class="blog-post-category">
 											<a href="#">
-												<span data-text="Category">Category</span>
+												<span data-text="Programing">Programing</span>
 											</a>
 										</div>
 									</div>
@@ -636,19 +492,19 @@
 										<ul class="list-inline-dot sm-heading text-white mb-2">
 											<li>
 												<a class="link-hover" href="#">
-													<span data-text="by Admin">by Admin</span>
+													<span data-text="by Said-laasri">by Said-laasri</span>
 												</a>
 											</li>
 											<li>
 												<a class="link-hover" href="#">
-													<span data-text="Oct 8">Oct 8</span>
+													<span data-text="Jan 28">Jan 28</span>
 												</a>
 											</li>
 										</ul>
 										<h2 class="mb-0">
 											<a class="blog-caption" href="#">
 												<i class="bi bi-arrow-right"></i>
-												Blog Post Title
+												Mastering TypeScript: Efficient & Type-Safe Coding
 											</a>
 										</h2>
 									</div>
@@ -665,7 +521,7 @@
 										<!-- Category -->
 										<div class="blog-post-category">
 											<a href="#">
-												<span data-text="Category">Category</span>
+												<span data-text="Best Practices">Best Practices</span>
 											</a>
 										</div>
 									</div>
@@ -673,19 +529,57 @@
 										<ul class="list-inline-dot sm-heading text-white mb-2">
 											<li>
 												<a class="link-hover" href="#">
-													<span data-text="by Admin">by Admin</span>
+													<span data-text="by Said-laasri">by Said-laasri</span>
 												</a>
 											</li>
 											<li>
 												<a class="link-hover" href="#">
-													<span data-text="Oct 8">Oct 8</span>
+													<span data-text="Jun 17">Jun 17</span>
 												</a>
 											</li>
 										</ul>
 										<h2 class="mb-0">
 											<a class="blog-caption" href="#">
 												<i class="bi bi-arrow-right"></i>
-												Blog Post Title
+												Simplicity & Efficiency: KISS, YAGNI, DRY in JavaScript
+											</a>
+										</h2>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide Item 4 -->
+							<div class="swiper-slide">
+								<div class="blog-post-box">
+									<div class="blog-post-img">
+										<!-- Image -->
+										<a class="blog-post-img-link" href="#">
+											<img src="assets/images/blog-img.jpg" alt="">
+										</a>
+										<!-- Category -->
+										<div class="blog-post-category">
+											<a href="#">
+												<span data-text="Community & Open Source">Community & Open Source</span>
+											</a>
+										</div>
+									</div>
+									<div class="mt-4">
+										<ul class="list-inline-dot sm-heading text-white mb-2">
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="by Said-laasri">by Said-laasri</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Jun 6">Jun 6</span>
+												</a>
+											</li>
+										</ul>
+										<h2 class="mb-0">
+											<a class="blog-caption" href="#">
+												<i class="bi bi-arrow-right"></i>
+												Step-by-Step Guide: Contributing to Open Source
 											</a>
 										</h2>
 									</div>
@@ -742,10 +636,7 @@
 						</div><!-- end contact-form -->
 					</div>
 				</div><!-- end row -->
-				<!-- Google Maps -->
-				<div id="map1" class="gmap gmap-md border-radius-1 mt-5" data-latitude="51.513569"
-					data-longitude="-0.123443"></div>
-				<!-- end Google Maps -->
+				<div id="map" class="gmap gmap-md border-radius-1 mt-5"></div>
 			</div><!-- end container -->
 		</div>
 		<!-- end Contact section -->
@@ -754,7 +645,7 @@
 
 	<!-- Footer -->
 	<div class="py-4 py-lg-5 text-center">
-		<p>&copy; 2023 FlaTheme, All Rights Reserved.</p>
+		<p>&copy; 2025 <a href="https://github.com/Said-laasri" target="_blank">Said-Laasri</a>, All Rights Reserved.</p>
 	</div>
 	<!-- end Footer -->
 
@@ -768,8 +659,11 @@
 	<!-- end Scroll To Top -->
 
 	<!-- JavaScripts -->
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 	<script src="assets/plugins/jquery.min.js"></script>
+	<script src="assets/js/data.js"></script>
+	<script src="assets/js/leaflet.js"></script>
 	<script src="assets/plugins/plugins.js"></script>
 	<script src="assets/js/functions.js"></script>
 </body>

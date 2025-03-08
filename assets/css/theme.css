@@ -483,6 +483,18 @@ p {
   line-height: 1.7;
 }
 
+/* h1 active state */
+h1.selectable {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Active Title Style */
+h1.selectable.active {
+  color: #ffffff; /* Highlight color */
+  text-decoration: underline;
+}
+
 @media (max-width: 991.98px) {
   .font-small {
     font-size: 0.9em;
@@ -697,6 +709,98 @@ a:focus, a:active, button:focus, button:active {
 
 .button-dot {
   padding: 13px 46px 13px 30px;
+}
+
+.button-resume {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 140px;
+  margin-left: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 3em;
+  padding: 13px 33px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: ease-out 0.12s;
+  transition: ease-out 0.12s;
+}
+
+.button-resume::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+    -webkit-transition: linear 0.06s;
+  transition: linear 0.06s;
+}
+
+.button-resume:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #ff82f3;
+  background-image: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: linear 0.1s;
+  transition: linear 0.1s;
+}
+
+.button-resume span {
+  display: block;
+  position: relative;
+  color: transparent;
+}
+
+.button-resume span:before, .button-resume span:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  color: white;
+  -webkit-transition: ease-out 0.14s;
+  transition: ease-out 0.14s;
+}
+
+.button-resume span:before {
+  top: 0;
+}
+
+.button-resume span:after {
+  visibility: hidden;
+  opacity: 0;
+  top: 100%;
+}
+
+.button-resume:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.button-resume:hover:after {
+  opacity: 0.2;
+}
+
+.button-resume:hover span:before {
+  visibility: hidden;
+  opacity: 0;
+  top: -100%;
+}
+
+.button-resume:hover span:after {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
 }
 
 .button-dot:before {
