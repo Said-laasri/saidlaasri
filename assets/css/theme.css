@@ -942,15 +942,23 @@ a:focus, a:active, button:focus, button:active {
 /*------------------------------------------------
   6. Clients
 -------------------------------------------------*/
-.client-box a img {
-  opacity: 0.6;
-  width: 100%;
-  -webkit-transition: ease-out 0.12s;
-  transition: ease-out 0.12s;
+.client-box {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  position: relative; /* Necessary for absolute positioning of h4 */
+  height: 100px; /* You can adjust the height as needed */
 }
 
-.client-box a:hover img {
-  opacity: 1;
+.client-box h4 {
+  position: absolute; /* Positions the text over the image */
+  color: rgba(255, 255, 255, 0.8); /* Text color */
+  font-size: 2rem; /* Font size, adjust as needed */
+  margin: 0; /* Remove default margins */
+}
+
+.client-box h4:hover {
+  color: white; /* Text color on hover */
 }
 
 /*------------------------------------------------
@@ -1470,6 +1478,7 @@ button.mfp-close:hover {
   -webkit-transform: scale(1);
   transform: scale(1);
   width: 100%;
+  height: 80%; 
   -webkit-transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
