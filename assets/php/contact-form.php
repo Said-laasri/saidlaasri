@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 // Include PHPMailer files (ensure you have the correct path if you use Composer)
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -17,6 +20,8 @@ $subject = $_POST['subject'];
 $gmail_name= getenv('GMAIL_NAME');
 $gmail_pass= getenv('GMAIL_PASS');
 
+
+echo "Gmail Name: $gmail_name"; // Just for debugging purposes
 // Mail content
 $body = "From: $name <br> E-Mail: $email <br> Message: <br> $message";
 
