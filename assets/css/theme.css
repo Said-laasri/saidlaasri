@@ -1477,10 +1477,18 @@ button.mfp-close:hover {
 .blog-post-box .blog-post-img img {
   -webkit-transform: scale(1);
   transform: scale(1);
-  width: 100%;
-  height: 80%; 
+  width: 100%; 
+  height: 24rem; /* Adjust height to your desired value */
+  object-fit: cover; /* Ensures images are cropped to fit the fixed size */
   -webkit-transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media screen and (max-width: 575.98px) {
+  .blog-post-box .blog-post-img img {
+    height: 14rem; /* Adjust height to your desired value */
+  }
+  
 }
 
 .blog-post-box .blog-post-img .blog-post-category {
