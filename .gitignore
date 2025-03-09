@@ -1,0 +1,37 @@
+# .env file
+.env
+
+# Composer vendor directory
+/vendor
+
+# Node.js dependencies
+/node_modules
+
+# IDE files
+/.idea
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Log and debug files
+*.log
+*.sql
+*.sqlite
+
+# Build and generated files
+/dist
+/build
+/public
+/assets
+/storage
+/tmp
+
+# Secrets and local config
+/secrets
+/config/config.local.php
+
+# PHP session and cache directories
+/session/
+/cache/

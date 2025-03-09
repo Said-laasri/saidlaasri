@@ -5,11 +5,17 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../../vendor/autoload.php';  // If using Composer, include this line
 
+// Load environment variables from .env file
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Retrieve form data
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $subject = $_POST['subject'];
+$gmail_name= getenv('GMAIL_NAME');
+$gmail_pass= getenv('GMAIL_PASS');
 
 // Mail content
 $body = "From: $name <br> E-Mail: $email <br> Message: <br> $message";
@@ -22,14 +28,14 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'saidlaasri3@gmail.com'; // Your Gmail email address
-    $mail->Password = 'passwordssd';  // Your Gmail app password (not your regular Gmail password)
+    $mail->Username = $gmail_name; // Your Gmail email address
+    $mail->Password = $gmail_pass;  // Your Gmail app password (not your regular Gmail password)
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
     // Recipients
     $mail->setFrom($email, $name);
-    $mail->addAddress('saidlaasri3@gmail.com');  // Your Gmail address
+    $mail->addAddress($gmail_name);  // Your Gmail address
     $mail->addReplyTo($email, $name);
     
     // Email Content
