@@ -2149,3 +2149,18 @@ body.loaded:after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@keyframes moveLeftRight {
+  0% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  100% { transform: translateX(-8px); }
+}
+
+.client-box {
+  transition: transform 0.3s ease-in-out;
+  animation: moveLeftRight 3s infinite ease-in-out;
+}
+
+.client-box:hover {
+  transform: translateY(-5px); /* Slight bounce when hovered */
+}
