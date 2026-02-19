@@ -249,79 +249,49 @@ $lightboxMedia.each(function() {
 
 
 /*===============================================
-  7. Google Maps
-===============================================*/
-var mapCanvas = $(".gmap");
-
-if (mapCanvas.length) {
-  var m,divId,initLatitude, initLongitude, map;
-
-  for (var i = 0; i < mapCanvas.length; i++) {
-    m = mapCanvas[i];
-
-    initLatitude = m.dataset["latitude"];
-    initLongitude = m.dataset["longitude"];
-    divId = "#"+ m["id"];
-
-    map = new GMaps({
-      el: divId,
-      lat: initLatitude,
-      lng: initLongitude,
-      zoom: 16,
-      scrollwheel: false,
-      styles: [
-          /* style your map at https://snazzymaps.com/editor and paste JSON here */
-      ]
-    });
-
-    map.addMarker({
-      lat : initLatitude,
-      lng : initLongitude
-    });
-  }
-}
-
-
-/*===============================================
   8. Contact Form
 ===============================================*/
 $("#contactform").on("submit", function(e) {
-  var name = $("#name").val();
-  var email = $("#email").val();
-  var subject = $("#subject").val();
-  var message = $("#message").val();
-
-  if (name === "") {
-    $("#name").addClass("error-color");
-  }
-  if (email === "") {
-    $("#email").addClass("error-color");
-  }
-  if (subject === "") {
-    $("#subject").addClass("error-color");
-  }
-  if (message === "") {
-    $("#message").addClass("error-color");
-  }
-
-  else {
-    $.ajax({
-      url:"assets/php/contact-form.php",
-      data:$(this).serialize(),
-      type:"POST",
-      success:function(data){
-        $("#success").addClass("show-result"); //=== Show Success Message==
-        $("#contactform").each(function(){
-          this.reset();
-        });
-      },
-      error:function(data){
-        $("#error").addClass("show-result"); //===Show Error Message====
-      }
-    });
-    var forms = $("#contactform input, #contactform textarea");
-    forms.removeClass("error-color");
-  }
-
   e.preventDefault();
+  
+  var $form = $(this);
+  var $submitBtn = $form.find('button[type="submit"]');
+  var $success = $("#success");
+  var $error = $("#error");
+
+  // Reset states
+  $(".error-color").removeClass("error-color");
+  $success.removeClass("show-result");
+  $error.removeClass("show-result");
+
+  // Validation
+  var isValid = true;
+  $("#name, #email, #subject, #message").each(function() {
+    if ($(this).val().trim() === "") {
+      $(this).addClass("error-color");
+      isValid = false;
+    }
+  });
+
+  if (!isValid) return;
+
+  $submitBtn.prop("disabled", true);
+
+  // Submit via Formspree
+  $.ajax({
+    url: $form.attr("action"),
+    method: "POST",
+    data: $form.serialize(),
+    dataType: "json",
+    success: function() {
+      $success.addClass("show-result");
+      $form.trigger("reset");
+    },
+    error: function() {
+      $error.addClass("show-result");
+    },
+    complete: function() {
+      $submitBtn.prop("disabled", false);
+    }
+  });
 });

@@ -1,540 +1,673 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-        <meta name="keywords" content="">
-		<title>Mone - Personal Portfolio Template</title>
-		<!-- Favicon -->
-        <link href="assets/images/favicon.png" rel="shortcut icon">
-		<!-- CSS -->
-		<link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
-		<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
-		<link href="assets/css/theme.css" rel="stylesheet">
-		<!-- Fonts/Icons -->
-		<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-		<link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
-	</head>
-	<body data-preloader="true">
 
-		<!-- Cursor -->
-		<div id="cursor"></div>
-		<!-- end Cursor -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Said Laasri</title>
+	<!-- Favicon -->
+	<link href="assets/images/favicon.svg" rel="shortcut icon">
+	<!-- CSS -->
+	<link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+	<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="assets/css/theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<!-- Fonts/Icons -->
+	<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+</head>
 
-		<!-- Header -->
-		<div class="header">
-			<div class="container-fluid">
-				<div class="header-wrapper">
-					<!-- Header Logo -->
-					<div class="header-logo">
-						<h2>Mone</h2>
+<body data-preloader="true">
+
+	<!-- Cursor -->
+	<div id="cursor"></div>
+	<!-- end Cursor -->
+
+	<!-- Header -->
+	<div class="header">
+		<div class="container-fluid">
+			<div class="header-wrapper">
+				<!-- Header Logo -->
+				<div class="header-logo">
+					<h2>SL</h2>
+				</div>
+				<!-- Header Nav -->
+				<div class="header-nav">
+					<a class="button button-sm button-dot me-2 me-lg-3" href="#contact">
+						<span data-text="Let's Talk">Let's Talk</span>
+					</a>
+					<!-- Nav Menu Toggle -->
+					<button id="nav-toggle" class="button button-sm button-dot button-white">
+						<span data-text="Menu">Menu</span>
+					</button>
+					<!-- Nav Menu Box -->
+					<div class="nav-box">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#about"><i class="bi bi-arrow-right"></i>About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#services"><i class="bi bi-arrow-right"></i>Services</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#portfolio"><i class="bi bi-arrow-right"></i>Portfolio</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#awards"><i class="bi bi-arrow-right"></i>Achievements</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#blog"><i class="bi bi-arrow-right"></i>Blog</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#contact"><i class="bi bi-arrow-right"></i>Contact</a>
+							</li>
+						</ul>
 					</div>
-					<!-- Header Nav -->
-					<div class="header-nav">
-						<a class="button button-sm button-dot me-2 me-lg-3" href="#contact">
-							<span data-text="Let's Talk">Let's Talk</span>
-						</a>
-						<!-- Nav Menu Toggle -->
-						<button id="nav-toggle" class="button button-sm button-dot button-white">
-							<span data-text="Menu">Menu</span>
-						</button>
-						<!-- Nav Menu Box -->
-						<div class="nav-box">
-							<ul class="nav">
-								<li class="nav-item">
-									<a class="nav-link" href="#about"><i class="bi bi-arrow-right"></i>About</a>
+				</div><!-- end header-nav -->
+			</div><!-- end header-wrapper -->
+		</div><!-- end container -->
+	</div>
+	<!-- end Header -->
+
+	<main data-bs-spy="scroll" data-bs-target=".nav-box">
+
+		<!-- Hero section -->
+		<div id="about" class="hero-section">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="hero-heading display-1 fw-bold mb-0 stroke-text">SAID LAASRI</h1>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div>
+		<!-- end Hero section -->
+
+		<!-- About section -->
+		<div class="container">
+			<div class="row g-4 g-md-5">
+				<div class="col-12 col-lg-4 order-lg-2 text-center">
+					<!-- Hero Avatar -->
+					<div class="hero-avatar">
+						<img src="assets/images/hero-avatar.jpg" alt="">
+					</div>
+					<!-- end Hero Avatar -->
+				</div>
+				<div class="col-12 col-lg-4 order-lg-1">
+					<div class="row g-4 g-lg-5">
+						<div class="col-12 col-md-4 col-lg-12">
+							<h6 class="sm-heading">Biography</h6>
+							<p>Passionate backend developer with a focus on scalability, security, and efficient
+								systems. I build robust solutions that prioritize performance and user safety.</p>
+						</div>
+						<div class="col-6 col-md-4 col-lg-12">
+							<h6 class="sm-heading">Skills</h6>
+							<ul class="list-inline-dot">
+								<li>Backend Development</li>
+								<li>Cybersecurity</li>
+								<li>Database Optimization</li>
+								<li>API Design</li>
+							</ul>
+						</div>
+						<div class="col-6 col-md-4 col-lg-12">
+							<h6 class="sm-heading">Connect</h6>
+							<ul class="list-inline">
+								<li>
+									<a class="button-circle button-circle-sm" target="_blank"
+										href="https://www.linkedin.com/in/said-laasri/">
+										<i class="bi bi-linkedin"></i>
+										<i class="bi bi-linkedin"></i>
+									</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#services"><i class="bi bi-arrow-right"></i>Services</a>
+								<li>
+									<a class="button-circle button-circle-sm" target="_blank"
+										href="https://x.com/saidlaasr">
+										<i class="bi bi-twitter-x"></i>
+										<i class="bi bi-twitter-x"></i>
+									</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#portfolio"><i class="bi bi-arrow-right"></i>Portfolio</a>
+								<li>
+									<a class="button-circle button-circle-sm" target="_blank"
+										href="https://github.com/Said-laasri">
+										<i class="bi bi-github"></i>
+										<i class="bi bi-github"></i>
+									</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#awards"><i class="bi bi-arrow-right"></i>Awards</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#testimonial"><i class="bi bi-arrow-right"></i>Testimonial</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#blog"><i class="bi bi-arrow-right"></i>Blog</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#contact"><i class="bi bi-arrow-right"></i>Contact</a>
+								<li>
+									<a class="button-circle button-circle-sm" target="_blank"
+										href="https://medium.com/@laasrisaid34">
+										<i class="bi bi-medium"></i>
+										<i class="bi bi-medium"></i>
+									</a>
 								</li>
 							</ul>
 						</div>
-					</div><!-- end header-nav -->
-				</div><!-- end header-wrapper -->
-			</div><!-- end container -->
-		</div>
-		<!-- end Header -->
+						<button class="button-resume"
+							href="https://docs.google.com/document/d/13Fy4JK4C9YRSUz9TvDD4bdla7alf-en0/export?format=pdf"
+							download>
+							<a href="https://docs.google.com/document/d/13Fy4JK4C9YRSUz9TvDD4bdla7alf-en0/export?format=pdf"
+								download>
+								<span data-text="Resume ⤓">Resume ⤓</span>
 
-		<main data-bs-spy="scroll" data-bs-target=".nav-box">
+							</a>
 
-			<!-- Hero section -->
-			<div id="about" class="hero-section">
-				<div class="container text-center">
-					<div class="row">
-						<div class="col-12">
-							<h1 class="hero-heading display-1 fw-bold mb-0 stroke-text">Arthur Jackson</h1>
+						</button>
+					</div><!-- end row(inner) -->
+				</div>
+				<div class="col-12 col-md-12 col-lg-4 order-lg-3 text-lg-end">
+					<div class="row g-4 g-lg-5">
+						<div class="col-4 col-lg-12">
+							<h6 class="sm-heading">Projects Done</h6>
+							<h1 class="fw-light display-4 mb-0 line-height-110">5+</h1>
 						</div>
-					</div><!-- end row -->
-				</div><!-- end container -->
-			</div>
-			<!-- end Hero section -->
+						<div class="col-4 col-lg-12">
+							<h6 class="sm-heading">Years of Experience</h6>
+							<h1 class="fw-light display-4 mb-0 line-height-110">4+</h1>
+						</div>
+						<div class="col-4 col-lg-12">
+							<h6 class="sm-heading">Worldwide Companies</h6>
+							<h1 class="fw-light display-4 mb-0 line-height-110">4</h1>
+						</div>
+					</div><!-- end row(inner) -->
+				</div>
+			</div><!-- end row -->
+		</div><!-- end container -->
+		<!-- end About section -->
 
-			<!-- About section -->
+		<!-- Services section -->
+		<div id="services" class="section">
 			<div class="container">
-				<div class="row g-4 g-md-5">
-					<div class="col-12 col-lg-4 order-lg-2 text-center">
-						<!-- Hero Avatar -->
-						<div class="hero-avatar">
-							<img src="assets/images/hero-avatar.jpg" alt="">
-						</div>
-						<!-- end Hero Avatar -->
+				<div class="row g-4 g-xl-5">
+					<div class="col-12 col-xl-4">
+						<span class="title-heading text-white-04">Services</span>
+						<h1 class="display-3 fw-medium mb-0">What I <span class="text-gradient">Do</span></h1>
 					</div>
-					<div class="col-12 col-lg-4 order-lg-1">
-						<div class="row g-4 g-lg-5">
-							<div class="col-12 col-md-4 col-lg-12">
-								<h6 class="sm-heading">Biography</h6>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua</p>
+					<div class="col-12 col-xl-8">
+						<div class="row g-4">
+							<!-- Service box 1 -->
+							<div class="col-12">
+								<div class="service-box">
+									<div class="service-order">
+										<h3>01/</h3>
+									</div>
+									<div class="service-title">
+										<i class="bi bi-database-check"></i>
+										<h3>Design</h3>
+									</div>
+									<div class="service-text">
+										<p>Designing efficient backend architectures with the focus on scalability and
+											security.</p>
+									</div>
+								</div>
 							</div>
-							<div class="col-6 col-md-4 col-lg-12">
-								<h6 class="sm-heading">Skills</h6>
-								<ul class="list-inline-dot">
-									<li>Web Development</li>
-									<li>UI & UX Design</li>
-									<li>Marketing</li>
-									<li>SEO</li>
-									<li>Management</li>
-								</ul>
+							<!-- Service box 2 -->
+							<div class="col-12">
+								<div class="service-box">
+									<div class="service-order">
+										<h3>02/</h3>
+									</div>
+									<div class="service-title">
+										<i class="bi bi-code-slash"></i>
+										<h3>Development</h3>
+									</div>
+									<div class="service-text">
+										<p>Building user-friendly applications with a focus on performance and security.
+										</p>
+									</div>
+								</div>
 							</div>
-							<div class="col-6 col-md-4 col-lg-12">
-								<h6 class="sm-heading">Connect</h6>
-								<ul class="list-inline">
-									<li>
-										<a class="button-circle button-circle-sm" href="#">
-											<i class="bi bi-facebook"></i>
-											<i class="bi bi-facebook"></i>
-										</a>
-									</li>
-									<li>
-										<a class="button-circle button-circle-sm" href="#">
-											<i class="bi bi-twitter"></i>
-											<i class="bi bi-twitter"></i>
-										</a>
-									</li>
-									<li>
-										<a class="button-circle button-circle-sm" href="#">
-											<i class="bi bi-instagram"></i>
-											<i class="bi bi-instagram"></i>
-										</a>
-									</li>
-								</ul>
+							<!-- Service box 3 -->
+							<div class="col-12">
+								<div class="service-box">
+									<div class="service-order">
+										<h3>03/</h3>
+									</div>
+									<div class="service-title">
+										<i class="bi bi-rocket-takeoff"></i>
+										<h3>Shipping</h3>
+									</div>
+									<div class="service-text">
+										<p>Deploying applications seamlessly and efficiently.
+										</p>
+									</div>
+								</div>
 							</div>
-						</div><!-- end row(inner) -->
-					</div>
-					<div class="col-12 col-md-12 col-lg-4 order-lg-3 text-lg-end">
-						<div class="row g-4 g-lg-5">
-							<div class="col-4 col-lg-12">
-								<h6 class="sm-heading">Projects Done</h6>
-								<h1 class="fw-light display-4 mb-0 line-height-110">432</h1>
-							</div>
-							<div class="col-4 col-lg-12">
-								<h6 class="sm-heading">Years of Experience</h6>
-								<h1 class="fw-light display-4 mb-0 line-height-110">13+</h1>
-							</div>
-							<div class="col-4 col-lg-12">
-								<h6 class="sm-heading">Worldwide Clients</h6>
-								<h1 class="fw-light display-4 mb-0 line-height-110">900</h1>
-							</div>
+							<!-- end Service box 3 -->
 						</div><!-- end row(inner) -->
 					</div>
 				</div><!-- end row -->
 			</div><!-- end container -->
-			<!-- end About section -->
+		</div>
+		<!-- end Services section -->
 
-			<!-- Services section -->
-			<div id="services" class="section">
-				<div class="container">
-					<div class="row g-4 g-xl-5">
-						<div class="col-12 col-xl-4">
-							<span class="title-heading text-white-04">Services</span>
-							<h1 class="display-3 fw-medium mb-0">What I <span class="text-gradient">Do</span></h1>
+		<!-- teck stack -->
+		<!-- Clients section -->
+		<div class="section pt-0">
+			<div class="container">
+				<div class="swiper clients-slider">
+					<div class="swiper-wrapper">
+						<!-- Slider Item 2 -->
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>TypeScript</h4>
+							</div>
 						</div>
-						<div class="col-12 col-xl-8">
-							<div class="row g-4">
-								<!-- Service box 1 -->
-								<div class="col-12">
-									<div class="service-box">
-										<div class="service-order">
-											<h3>01/</h3>
-										</div>
-										<div class="service-title">
-											<i class="bi bi-brush"></i>
-											<h3>Design</h3>
-										</div>
-										<div class="service-text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut</p>
-										</div>
-									</div>
+						<!-- Slider Item 3 -->
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>NodeJs</h4>
+							</div>
+						</div>
+						<!-- Slider Item 4 -->
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>C Sharp</h4>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>Python</h4>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>PHP</h4>
+							</div>
+						</div>
+						<!-- Slider Item 5 -->
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>PostgreSql</h4>
+							</div>
+						</div>
+						<!-- Slider Item 6 -->
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>MySql</h4>
+							</div>
+						</div>
+						<!-- Slider Item 6 -->
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>MongoDB</h4>
+							</div>
+						</div>
+						<!-- Slider Item 6 -->
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>Reactjs</h4>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="client-box">
+								<h4>Tailwind css</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- end Slider Item 6 -->
+			</div><!-- end swiper-wrapper -->
+		</div><!-- end clients-slider -->
+		</div><!-- end container -->
+		</div>
+		<!-- end Clients section -->
+		<!-- teck staack end -->
+		<!-- Portfolio section -->
+		<div id="portfolio" class="section-box">
+			<div class="section-sm bg-dark border-radius-1">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							<span class="title-heading text-white-04">Portfolio</span>
+							<h1 class="display-3 fw-medium">Recent <span class="text-gradient">Works</span></h1>
+							<p>Explore my latest projects, where I showcase my expertise in back-end development,
+								security, database optimization, and API design. Each project reflects my commitment to
+								building scalable, secure, and high-performance solutions.</p>
+							<!-- Slider Nav -->
+							<div class="mt-4">
+								<div class="swiper-portfolio-prev button-circle cursor-link">
+									<i class="bi bi-arrow-left"></i>
+									<i class="bi bi-arrow-left"></i>
 								</div>
-								<!-- Service box 2 -->
-								<div class="col-12">
-									<div class="service-box">
-										<div class="service-order">
-											<h3>02/</h3>
-										</div>
-										<div class="service-title">
-											<i class="bi bi-code-slash"></i>
-											<h3>Development</h3>
-										</div>
-										<div class="service-text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et</p>
-										</div>
-									</div>
+								<div class="swiper-portfolio-next button-circle cursor-link">
+									<i class="bi bi-arrow-right"></i>
+									<i class="bi bi-arrow-right"></i>
 								</div>
-								<!-- Service box 3 -->
-								<div class="col-12">
-									<div class="service-box">
-										<div class="service-order">
-											<h3>03/</h3>
-										</div>
-										<div class="service-title">
-											<i class="bi bi-laptop"></i>
-											<h3>Marketing</h3>
-										</div>
-										<div class="service-text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore</p>
-										</div>
-									</div>
-								</div>
-								<!-- end Service box 3 -->
-							</div><!-- end row(inner) -->
+							</div>
+							<!-- end Slider Nav -->
 						</div>
 					</div><!-- end row -->
-				</div><!-- end container -->
-			</div>
-			<!-- end Services section -->
-
-			<!-- Clients section -->
-			<div class="section pt-0">
-				<div class="container">
-					<div class="swiper clients-slider">
+					<div class="swiper portfolio-slider mt-4 mt-lg-5">
 						<div class="swiper-wrapper">
 							<!-- Slider Item 1 -->
 							<div class="swiper-slide">
-								<div class="client-box">
-									<a href="#">
-										<img src="assets/images/client-logo.jpg" alt="">
-									</a>
-								</div>
+								<div class="portfolio-box">
+									<!-- Image -->
+									<div class="portfolio-img">
+										<a href="#">
+											<img src="assets/images/talckatoo.png" alt="">
+										</a>
+									</div>
+									<div class="pt-4">
+										<!-- Categories -->
+										<ul class="list-inline-dot sm-heading text-white mb-2">
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Communication">Communication</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Translation">Translation</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="AI">AI</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Social">Social</span>
+												</a>
+											</li>
+										</ul>
+										<!-- Caption -->
+										<h2>
+											<a class="portfolio-caption" target="_blank" href="https://talckatoo.me/">
+												<i class="bi bi-arrow-right"></i>
+												Talckatoo
+											</a>
+										</h2>
+									</div>
+								</div><!-- end portfolio-box -->
 							</div>
 							<!-- Slider Item 2 -->
 							<div class="swiper-slide">
-								<div class="client-box">
-									<a href="#">
-										<img src="assets/images/client-logo.jpg" alt="">
-									</a>
-								</div>
+								<div class="portfolio-box">
+									<!-- Image -->
+									<div class="portfolio-img">
+										<a href="#">
+											<img src="assets/images/taaleem.png" alt="">
+										</a>
+									</div>
+									<div class="pt-4">
+										<!-- Categories -->
+										<ul class="list-inline-dot sm-heading text-white mb-2">
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="EdTech">EdTech</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="LMS">LMS</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="eLearning">eLearning</span>
+												</a>
+											</li>
+										</ul>
+										<!-- Caption -->
+										<h2>
+											<a class="portfolio-caption" target="_blank" href="https://www.taaleem.ma/">
+												<i class="bi bi-arrow-right"></i>
+												Taaleem
+											</a>
+										</h2>
+									</div>
+								</div><!-- end portfolio-box -->
 							</div>
 							<!-- Slider Item 3 -->
 							<div class="swiper-slide">
-								<div class="client-box">
-									<a href="#">
-										<img src="assets/images/client-logo.jpg" alt="">
-									</a>
-								</div>
+								<div class="portfolio-box">
+									<!-- Image -->
+									<div class="portfolio-img">
+										<a href="#">
+											<img src="assets/images/nowotch.png" alt="">
+										</a>
+									</div>
+									<div class="pt-4">
+										<!-- Categories -->
+										<ul class="list-inline-dot sm-heading text-white mb-2">
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Real Estate">Real Estate</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Property Management">Property Management</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="PropTech">PropTech</span>
+												</a>
+											</li>
+										</ul>
+										<!-- Caption -->
+										<h2>
+											<a class="portfolio-caption" target="_blank"
+												href="https://immo.nowotch.com/">
+												<i class="bi bi-arrow-right"></i>
+												NØwotch
+											</a>
+										</h2>
+									</div>
+								</div><!-- end portfolio-box -->
 							</div>
+							<!-- end Slider Item 3 -->
 							<!-- Slider Item 4 -->
 							<div class="swiper-slide">
-								<div class="client-box">
-									<a href="#">
-										<img src="assets/images/client-logo.jpg" alt="">
-									</a>
-								</div>
+								<div class="portfolio-box">
+									<!-- Image -->
+									<div class="portfolio-img">
+										<a href="#">
+											<img src="assets/images/rentalcar.jpg" alt="">
+										</a>
+									</div>
+									<div class="pt-4">
+										<!-- Categories -->
+										<ul class="list-inline-dot sm-heading text-white mb-2">
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Car Rental & Leasing">Car Rental & Leasing</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="Transportation">Transportation</span>
+												</a>
+											</li>
+											<li>
+												<a class="link-hover" href="#">
+													<span data-text="AutoTech">AutoTech</span>
+												</a>
+											</li>
+										</ul>
+										<!-- Caption -->
+										<h2>
+											<a class="portfolio-caption" target="_blank"
+												href="https://github.com/NickEmma/car-rental-app">
+												<i class="bi bi-arrow-right"></i>
+												RentWheels
+											</a>
+										</h2>
+									</div>
+								</div><!-- end portfolio-box -->
 							</div>
-							<!-- Slider Item 5 -->
-							<div class="swiper-slide">
-								<div class="client-box">
-									<a href="#">
-										<img src="assets/images/client-logo.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<!-- Slider Item 6 -->
-							<div class="swiper-slide">
-								<div class="client-box">
-									<a href="#">
-										<img src="assets/images/client-logo.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<!-- end Slider Item 6 -->
+							<!-- end Slider Item 4 -->
 						</div><!-- end swiper-wrapper -->
-					</div><!-- end clients-slider -->
+					</div><!-- end portfolio-slider -->
 				</div><!-- end container -->
 			</div>
-			<!-- end Clients section -->
+		</div>
+		<!-- end Portfolio section -->
 
-			<!-- Portfolio section -->
-			<div id="portfolio" class="section-box">
-				<div class="section-sm bg-dark border-radius-1">
-					<div class="container">
-						<div class="row">
-							<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-								<span class="title-heading text-white-04">Portfolio</span>
-								<h1 class="display-3 fw-medium">Recent <span class="text-gradient">Works</span></h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation</p>
-								<!-- Slider Nav -->
-								<div class="mt-4">
-									<div class="swiper-portfolio-prev button-circle cursor-link">
-										<i class="bi bi-arrow-left"></i>
-										<i class="bi bi-arrow-left"></i>
-									</div>
-									<div class="swiper-portfolio-next button-circle cursor-link">
-										<i class="bi bi-arrow-right"></i>
-										<i class="bi bi-arrow-right"></i>
-									</div>
+		<!-- Awards section -->
+		<div id="awards" class="section pb-6">
+			<div class="container">
+				<div class="row g-4 g-xl-5">
+					<div class="col-12 col-xl-4">
+						<span class="title-heading text-white-04">Achievements</span>
+						<h1 class="display-3 fw-medium mb-0 selectable" onclick="displayCards('awards', this)">
+							Awa<span class="text-gradient">rds</span>
+						</h1>
+						<h1 class="display-3 fw-medium mb-0 selectable" onclick="displayCards('experience', this)">
+							Expe<span class="text-gradient">rience</span>
+						</h1>
+						<h1 class="display-3 fw-medium mb-0 selectable" onclick="displayCards('education', this)">
+							Educa<span class="text-gradient">tion</span>
+						</h1>
+					</div>
+					<div class="col-12 col-xl-8">
+						<div class="row g-4" id="cards-container">
+							<!-- Award box 1 -->
+							<!-- data dynamicaly generated -->
+						</div><!-- end row(inner) -->
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div>
+
+		<!-- Testimonial section -->
+		<div id="testimonial" class="section">
+			<div class="container">
+				<div class="swiper testimonial-slider">
+					<div class="swiper-wrapper">
+						<!-- Testimonial 1 -->
+						<div class="swiper-slide">
+							<div class="testimonial-box">
+								<div class="testimonial-avatar">
+									<img src="https://media.licdn.com/dms/image/v2/D5603AQHWxiMVpAehsw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698209406039?e=1769644800&v=beta&t=ILYzr2dMAsOTMqesHCKBawJiWpq0PpuH8npN98WC2Dw"
+										alt="Htet (Rex) Naing">
 								</div>
-								<!-- end Slider Nav -->
+								<div class="testimonial-content">
+									<div class="mb-3">
+										<h3>Minh Tam Pham</h3>
+										<span class="sm-heading text-white">React Native Developer - Commonly</span>
+									</div>
+									<p class="fs-4 fw-normal fst-italic line-height-140">Said's patience and knowledge
+										always inspires me in programming. He has always been very supportive and
+										proactive in our project, as well as helping others solve problems. We are happy
+										to have Said on the team.</p>
+								</div>
 							</div>
-						</div><!-- end row -->
-						<div class="swiper portfolio-slider mt-4 mt-lg-5">
-							<div class="swiper-wrapper">
-								<!-- Slider Item 1 -->
-								<div class="swiper-slide">
-									<div class="portfolio-box">
-										<!-- Image -->
-										<div class="portfolio-img">
-											<a href="#">
-												<img src="assets/images/portfolio-img.jpg" alt="">
-											</a>
-										</div>
-										<div class="pt-4">
-											<!-- Categories -->
-											<ul class="list-inline-dot sm-heading text-white mb-2">
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-											</ul>
-											<!-- Caption -->
-											<h2>
-												<a class="portfolio-caption" href="#">
-													<i class="bi bi-arrow-right"></i>
-													Project Title Here
-												</a>
-											</h2>
-										</div>
-									</div><!-- end portfolio-box -->
-								</div>
-								<!-- Slider Item 2 -->
-								<div class="swiper-slide">
-									<div class="portfolio-box">
-										<!-- Image -->
-										<div class="portfolio-img">
-											<a href="#">
-												<img src="assets/images/portfolio-img.jpg" alt="">
-											</a>
-										</div>
-										<div class="pt-4">
-											<!-- Categories -->
-											<ul class="list-inline-dot sm-heading text-white mb-2">
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-											</ul>
-											<!-- Caption -->
-											<h2>
-												<a class="portfolio-caption" href="#">
-													<i class="bi bi-arrow-right"></i>
-													Project Title Here
-												</a>
-											</h2>
-										</div>
-									</div><!-- end portfolio-box -->
-								</div>
-								<!-- Slider Item 3 -->
-								<div class="swiper-slide">
-									<div class="portfolio-box">
-										<!-- Image -->
-										<div class="portfolio-img">
-											<a href="#">
-												<img src="assets/images/portfolio-img.jpg" alt="">
-											</a>
-										</div>
-										<div class="pt-4">
-											<!-- Categories -->
-											<ul class="list-inline-dot sm-heading text-white mb-2">
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-												<li>
-													<a class="link-hover" href="#">
-														<span data-text="Category">Category</span>
-													</a>
-												</li>
-											</ul>
-											<!-- Caption -->
-											<h2>
-												<a class="portfolio-caption" href="#">
-													<i class="bi bi-arrow-right"></i>
-													Project Title Here
-												</a>
-											</h2>
-										</div>
-									</div><!-- end portfolio-box -->
-								</div>
-								<!-- end Slider Item 3 -->
-							</div><!-- end swiper-wrapper -->
-						</div><!-- end portfolio-slider -->
-					</div><!-- end container -->
-				</div>
-			</div>
-			<!-- end Portfolio section -->
-
-			<!-- Awards section -->
-			<div id="awards" class="section pb-0">
-				<div class="container">
-					<div class="row g-4 g-xl-5">
-						<div class="col-12 col-xl-4">
-							<span class="title-heading text-white-04">Achievements</span>
-							<h1 class="display-3 fw-medium mb-0">Awa<span class="text-gradient">rds</span></h1>
 						</div>
-						<div class="col-12 col-xl-8">
-							<div class="row g-4">
-								<!-- Award box 1 -->
-								<div class="col-12 col-md-6">
-									<div class="fancy-box">
-										<h4>Award Title</h4>
-										<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore</p>
-									</div>
+						<div class="swiper-slide">
+							<div class="testimonial-box">
+								<div class="testimonial-avatar">
+									<img src="https://media.licdn.com/dms/image/v2/D5603AQEL2JUM95rxqA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1670864145676?e=1769644800&v=beta&t=caT9R7CDjpf2L5FHgGmonx_WKhnz-BwZSDAzu2l-eUI"
+										alt="Htet (Rex) Naing">
 								</div>
-								<!-- Award box 2 -->
-								<div class="col-12 col-md-6">
-									<div class="fancy-box">
-										<h4>Award Title</h4>
-										<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et</p>
+								<div class="testimonial-content">
+									<div class="mb-3">
+										<h3>Htet Naing</h3>
+										<span class="sm-heading text-white">Founding Engineer - Juice Serve</span>
 									</div>
+									<p class="fs-4 fw-normal fst-italic line-height-140">Said is a fantastic software
+										engineer, and his detail-oriented approach made him a pleasure to work with...
+									</p>
 								</div>
-								<!-- Award box 3 -->
-								<div class="col-12 col-md-6">
-									<div class="fancy-box">
-										<h4>Award Title</h4>
-										<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore</p>
-									</div>
-								</div>
-								<!-- Award box 4 -->
-								<div class="col-12 col-md-6">
-									<div class="fancy-box">
-										<h4>Award Title</h4>
-										<h6 class="sm-heading text-white-04 mb-2">2023</h6>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore</p>
-									</div>
-								</div>
-								<!-- end Award box 4 -->
-							</div><!-- end row(inner) -->
+							</div>
 						</div>
-					</div><!-- end row -->
-				</div><!-- end container -->
-			</div>
-			<!-- end Awards section -->
+						<!-- Testimonial 2 -->
+						<div class="swiper-slide">
+							<div class="testimonial-box">
+								<div class="testimonial-avatar">
+									<img src="https://media.licdn.com/dms/image/v2/D4D03AQEI9Sh_KYBR7Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720447360513?e=1769644800&v=beta&t=Edh7ror1CfKkzXzbquJz8-IXVbyGD9moHjwP0zaa_RA"
+										alt="Piesie (Omane Kwadwo) Yeboah">
+								</div>
+								<div class="testimonial-content">
+									<div class="mb-3">
+										<h3>Piesie Yeboah</h3>
+										<span class="sm-heading text-white">Software Engineer - SKH Ventures</span>
+									</div>
+									<p class="fs-4 fw-normal fst-italic line-height-140">I had the pleasure of working
+										With Said at Microverse, I was truly impressed...</p>
+								</div>
+							</div>
+						</div>
+						<!-- Testimonial 3 -->
+						<div class="swiper-slide">
+							<div class="testimonial-box">
+								<div class="testimonial-avatar">
+									<img src="https://media.licdn.com/dms/image/v2/D4E03AQFCBPB8fJ6RHQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718323562744?e=1769644800&v=beta&t=xQqtwqXTQeywJyaw6P8gBn8S5-dAYdj8d_S3Yce3FKE"
+										alt="Nicholas (TechieEmma) Emmanuel">
+								</div>
+								<div class="testimonial-content">
+									<div class="mb-3">
+										<h3>Nicholas Emmanuel</h3>
+										<span class="sm-heading text-white">Software Engineer - IndexTek</span>
+									</div>
+									<p class="fs-4 fw-normal fst-italic line-height-140">Said is highly detail-oriented,
+										with advanced system engineering expertise and exceptional problem-solving
+										skills. He excels at managing multiple tasks efficiently while maintaining a
+										high standard of quality and precision.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Testimonial 4 -->
+						<div class="swiper-slide">
+							<div class="testimonial-box">
+								<div class="testimonial-avatar">
+									<img src="https://media.licdn.com/dms/image/v2/C4E03AQGs6iy9nE6eFw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1648185569118?e=1769644800&v=beta&t=5juX0_lg3TpMufhkzXDAxAFdrDj3vwYidMM9-ejYIDc"
+										alt="Abdelmejid Oumer Ali">
+								</div>
+								<div class="testimonial-content">
+									<div class="mb-3">
+										<h3>Abdelmejid Oumer Ali</h3>
+										<span class="sm-heading text-white">Backend Engineer - Safaricom Telecommunications Ethiopia PLC</span>
 
-			<!-- Testimonial section -->
-			<div id="testimonial" class="section">
-				<div class="container">
-					<div class="swiper testimonial-slider">
-						<div class="swiper-wrapper">
-							<!-- Slider item 1 -->
-							<div class="swiper-slide">
-								<div class="testimonial-box">
-									<div class="testimonial-avatar">
-										<img src="assets/images/testimonial-avatar.jpg" alt="">
 									</div>
-									<div class="testimonial-content">
-										<div class="mb-3">
-											<h3>Alexander Warren</h3>
-											<span class="sm-heading text-white">CTO - Company</span>
-										</div>
-										<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-									</div>
+									<p class="fs-4 fw-normal fst-italic line-height-140">Said is an exceptional
+										developer, impressing me with his technical prowess and deep understanding of
+										complex programming concepts...</p>
 								</div>
 							</div>
-							<!-- Slider item 2 -->
-							<div class="swiper-slide">
-								<div class="testimonial-box">
-									<div class="testimonial-avatar">
-										<img src="assets/images/testimonial-avatar.jpg" alt="">
+						</div>
+						<!-- Testimonial 5 -->
+						<div class="swiper-slide">
+							<div class="testimonial-box">
+								<div class="testimonial-avatar">
+									<img src="https://media.licdn.com/dms/image/v2/D4E03AQFjk-wj4M-NPA/profile-displayphoto-scale_200_200/B4EZoDgB25KgAY-/0/1760995321994?e=1769644800&v=beta&t=FNwaypsICPQQd-T7AFoeBABlYQr_ED6LlJZv3mmUaq8"
+										alt="Elizabeth (Oyinlade) Ojesanmi">
+								</div>
+								<div class="testimonial-content">
+									<div class="mb-3">
+										<h3>Elizabeth Ojesanmi</h3>
+										<span class="sm-heading text-white">Program Manager, Admissions & Operations - Harambeans</span>
+
 									</div>
-									<div class="testimonial-content">
-										<div class="mb-3">
-											<h3>Alexander Warren</h3>
-											<span class="sm-heading text-white">CTO - Company</span>
-										</div>
-										<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-									</div>
+									<p class="fs-4 fw-normal fst-italic line-height-140">Said is one of the brightest
+										software developers I've ever met...</p>
 								</div>
 							</div>
-							<!-- Slider item 3 -->
-							<div class="swiper-slide">
-								<div class="testimonial-box">
-									<div class="testimonial-avatar">
-										<img src="assets/images/testimonial-avatar.jpg" alt="">
+						</div>
+						<!-- Testimonial 6 -->
+						<div class="swiper-slide">
+							<div class="testimonial-box">
+								<div class="testimonial-avatar">
+									<img src="https://media.licdn.com/dms/image/v2/C4D03AQElCeeq7oi04A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1662195284046?e=1769644800&v=beta&t=HCFjxG5IZfq5jaShfm-dxQlViXVlVAeW4nSS2SorOF8"
+										alt="Dorian Urem">
+								</div>
+								<div class="testimonial-content">
+									<div class="mb-3">
+										<h3>Dorian Urem</h3>
+										<span class="sm-heading text-white">Software Engineer - Happening</span>
+
 									</div>
-									<div class="testimonial-content">
-										<div class="mb-3">
-											<h3>Alexander Warren</h3>
-											<span class="sm-heading text-white">CTO - Company</span>
-										</div>
-										<p class="fs-4 fw-normal fst-italic line-height-140">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-									</div>
+									<p class="fs-4 fw-normal fst-italic line-height-140">Said is a great guy, he is
+										friendly, hardworking, eager to learn new things and is willing to help
+										others...</p>
 								</div>
 							</div>
 						</div>
@@ -546,6 +679,7 @@
 			</div>
 			<!-- end Testimonial section -->
 
+			<!-- end Awards section -->
 			<!-- Blog section -->
 			<div id="blog" class="section-box">
 				<div class="section-sm bg-dark border-radius-1">
@@ -553,10 +687,13 @@
 						<div class="row">
 							<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 								<span class="title-heading text-white-04">Journal</span>
-								<h1 class="display-3 fw-medium">Blog <span class="text-gradient">Posts</span></h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation</p>
+								<h1 class="display-3 fw-medium">Technical De<span class="text-gradient">ep Dives</span>
+								</h1>
+								<p>Dive into my Medium articles where I share my experiences and learnings in web
+									development, security, and beyond. Expect in-depth explorations of topics like
+									TypeScript, OWASP best practices, and the challenges of building scalable systems.
+									Let's
+									learn together!</p>
 								<!-- Slider Nav -->
 								<div class="mt-4">
 									<div class="swiper-blog-prev button-circle cursor-link">
@@ -579,12 +716,12 @@
 										<div class="blog-post-img">
 											<!-- Image -->
 											<a class="blog-post-img-link" href="#">
-												<img src="assets/images/blog-img.jpg" alt="">
+												<img src="assets/images/owasp.webp" alt="">
 											</a>
 											<!-- Category -->
 											<div class="blog-post-category">
 												<a href="#">
-													<span data-text="Category">Category</span>
+													<span data-text="Security">Security</span>
 												</a>
 											</div>
 										</div>
@@ -592,19 +729,21 @@
 											<ul class="list-inline-dot sm-heading text-white mb-2">
 												<li>
 													<a class="link-hover" href="#">
-														<span data-text="by Admin">by Admin</span>
+														<span data-text="by Said-laasri">by Said-laasri</span>
 													</a>
 												</li>
 												<li>
 													<a class="link-hover" href="#">
-														<span data-text="Oct 8">Oct 8</span>
+														<span data-text="
+													Mar 26">Mar 26</span>
 													</a>
 												</li>
 											</ul>
 											<h2 class="mb-0">
-												<a class="blog-caption" href="#">
+												<a class="blog-caption" target="_blank"
+													href="https://medium.com/@laasrisaid34/the-owasp-top-10-e568c7be4bf2">
 													<i class="bi bi-arrow-right"></i>
-													Blog Post Title
+													The OWASP Top 10
 												</a>
 											</h2>
 										</div>
@@ -616,12 +755,12 @@
 										<div class="blog-post-img">
 											<!-- Image -->
 											<a class="blog-post-img-link" href="#">
-												<img src="assets/images/blog-img.jpg" alt="">
+												<img src="assets/images/typescript.webp" alt="">
 											</a>
 											<!-- Category -->
 											<div class="blog-post-category">
 												<a href="#">
-													<span data-text="Category">Category</span>
+													<span data-text="Programing">Programing</span>
 												</a>
 											</div>
 										</div>
@@ -629,19 +768,20 @@
 											<ul class="list-inline-dot sm-heading text-white mb-2">
 												<li>
 													<a class="link-hover" href="#">
-														<span data-text="by Admin">by Admin</span>
+														<span data-text="by Said-laasri">by Said-laasri</span>
 													</a>
 												</li>
 												<li>
 													<a class="link-hover" href="#">
-														<span data-text="Oct 8">Oct 8</span>
+														<span data-text="Jan 28">Jan 28</span>
 													</a>
 												</li>
 											</ul>
 											<h2 class="mb-0">
-												<a class="blog-caption" href="#">
+												<a class="blog-caption" target="_blank"
+													href="https://medium.com/@laasrisaid34/mastering-typescript-a-journey-into-efficient-and-type-safe-programming-5947125fa478">
 													<i class="bi bi-arrow-right"></i>
-													Blog Post Title
+													Mastering TypeScript: Efficient & Type-Safe Coding
 												</a>
 											</h2>
 										</div>
@@ -653,12 +793,12 @@
 										<div class="blog-post-img">
 											<!-- Image -->
 											<a class="blog-post-img-link" href="#">
-												<img src="assets/images/blog-img.jpg" alt="">
+												<img src="assets/images/standers.webp" alt="">
 											</a>
 											<!-- Category -->
 											<div class="blog-post-category">
 												<a href="#">
-													<span data-text="Category">Category</span>
+													<span data-text="Best Practices">Best Practices</span>
 												</a>
 											</div>
 										</div>
@@ -666,19 +806,60 @@
 											<ul class="list-inline-dot sm-heading text-white mb-2">
 												<li>
 													<a class="link-hover" href="#">
-														<span data-text="by Admin">by Admin</span>
+														<span data-text="by Said-laasri">by Said-laasri</span>
 													</a>
 												</li>
 												<li>
 													<a class="link-hover" href="#">
-														<span data-text="Oct 8">Oct 8</span>
+														<span data-text="Jun 17">Jun 17</span>
 													</a>
 												</li>
 											</ul>
 											<h2 class="mb-0">
-												<a class="blog-caption" href="#">
+												<a class="blog-caption" target="_blank"
+													href="https://medium.com/@laasrisaid34/embracing-simplicity-and-efficiency-kiss-yagni-and-dry-principles-in-javascript-d0ca68a38831">
 													<i class="bi bi-arrow-right"></i>
-													Blog Post Title
+													Simplicity & Efficiency: KISS, YAGNI, DRY in JavaScript
+												</a>
+											</h2>
+										</div>
+									</div>
+								</div>
+
+								<!-- Slide Item 4 -->
+								<div class="swiper-slide">
+									<div class="blog-post-box">
+										<div class="blog-post-img">
+											<!-- Image -->
+											<a class="blog-post-img-link" href="#">
+												<img src="assets/images/opensource.png" alt="">
+											</a>
+											<!-- Category -->
+											<div class="blog-post-category">
+												<a href="#">
+													<span data-text="Community & Open Source">Community & Open
+														Source</span>
+												</a>
+											</div>
+										</div>
+										<div class="mt-4">
+											<ul class="list-inline-dot sm-heading text-white mb-2">
+												<li>
+													<a class="link-hover" href="#">
+														<span data-text="by Said-laasri">by Said-laasri</span>
+													</a>
+												</li>
+												<li>
+													<a class="link-hover" href="#">
+														<span data-text="Jun 6">Jun 6</span>
+													</a>
+												</li>
+											</ul>
+											<h2 class="mb-0">
+												<a class="blog-caption" target="_blank"
+													href="https://medium.com/@laasrisaid34/a-step-by-step-guide-how-to-contribute-to-open-source-as-a-developer-1fe7a195ec2a">
+													<i class="bi bi-arrow-right"></i>
+													Step-by-Step Guide: Contributing to Open Source
 												</a>
 											</h2>
 										</div>
@@ -712,7 +893,7 @@
 							</div><!-- end row(inner) -->
 							<!-- Contact Form -->
 							<div class="contact-form mt-4 mt-lg-5 text-xl-end">
-								<form method="post" id="contactform">
+								<form id="contactform" action="https://formspree.io/f/mnnpqznp" method="POST">
 									<div class="row gx-3 gy-0">
 										<div class="col-12 col-md-6">
 											<input type="text" id="name" name="name" placeholder="Name" required>
@@ -735,34 +916,37 @@
 							</div><!-- end contact-form -->
 						</div>
 					</div><!-- end row -->
-					<!-- Google Maps -->
-					<div id="map1" class="gmap gmap-md border-radius-1 mt-5" data-latitude="51.513569" data-longitude="-0.123443"></div>
-					<!-- end Google Maps -->
+					<div id="map" class="gmap gmap-md border-radius-1 mt-5"></div>
 				</div><!-- end container -->
 			</div>
 			<!-- end Contact section -->
 
-		</main>
+	</main>
 
-		<!-- Footer -->
-		<div class="py-4 py-lg-5 text-center">
-			<p>&copy; 2023 FlaTheme, All Rights Reserved.</p>
-		</div>
-		<!-- end Footer -->
+	<!-- Footer -->
+	<div class="py-4 py-lg-5 text-center">
+		<p>&copy; 2025 <a href="https://github.com/Said-laasri" target="_blank">Said-Laasri</a>, All Rights Reserved.
+		</p>
+	</div>
+	<!-- end Footer -->
 
-		<!-- Scroll To Top -->
-		<div class="scrolltotop">
-			<a class="button-circle" href="#">
-				<i class="bi bi-arrow-up"></i>
-				<i class="bi bi-arrow-up"></i>
-			</a>
-		</div>
-		<!-- end Scroll To Top -->
+	<!-- Scroll To Top -->
+	<div class="scrolltotop">
+		<a class="button-circle" href="#">
+			<i class="bi bi-arrow-up"></i>
+			<i class="bi bi-arrow-up"></i>
+		</a>
+	</div>
+	<!-- end Scroll To Top -->
 
-		<!-- JavaScripts -->
-		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-		<script src="assets/plugins/jquery.min.js"></script>
-		<script src="assets/plugins/plugins.js"></script>
-		<script src="assets/js/functions.js"></script>
-	</body>
+	<!-- JavaScripts -->
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+	<script src="assets/plugins/jquery.min.js"></script>
+	<script src="assets/js/data.js"></script>
+	<script src="assets/js/leaflet.js"></script>
+	<script src="assets/plugins/plugins.js"></script>
+	<script src="assets/js/functions.js"></script>
+</body>
+
 </html>
